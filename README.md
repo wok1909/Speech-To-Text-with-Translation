@@ -7,6 +7,7 @@
 - DeepSpeech and Googletrans are both opensource and there are links below if you need.
 
     ▸ DeepSheech : https://github.com/touchgadget/DeepSpeech.git
+    
     ▸ googletrans : https://github.com/ssut/py-googletrans.git
 
 ## Features
