@@ -7,10 +7,7 @@
 - DeepSpeech and Googletrans are both opensource and there are links below if you need.
 
     ▸ DeepSheech : https://github.com/touchgadget/DeepSpeech.git
-    
     ▸ googletrans : https://github.com/ssut/py-googletrans.git
-
-
 
 ## Features
 
@@ -19,8 +16,6 @@
 - If you need other languages, check if the language you are finding exist in followed link. ([Language List])
 - The input speech can be only English.
 - If you want to change your translated language, then say "Change language".
-
-
 
 
 ## Installation
@@ -41,6 +36,15 @@ tar xvf audio-0.9.3.tar.gz
 source ~/.profile
 ```
 
+Transcribe three test files.
+```sh
+deepspeech --model deepspeech-0.9.3-models.tflite --scorer deepspeech-0.9.3-models.scorer --audio audio/2830-3980-0043.wav
+deepspeech --model deepspeech-0.9.3-models.tflite --scorer deepspeech-0.9.3-models.scorer --audio audio/4507-16021-0012.wav
+deepspeech --model deepspeech-0.9.3-models.tflite --scorer deepspeech-0.9.3-models.scorer --audio audio/8455-210777-0068.wav
+
+```
+
+
 For the microphone usage, run the comomad and change the default values of```defaults.ctl.card ``` and ```defaults.pcm.card ``` to 3.
 
 ```sh
@@ -60,10 +64,6 @@ pip3 install halo webrtcvad --upgrade
 ```
 
 Now you are ready to use Deep Speech
-
-
-
-
 
 **googletrans**
 
@@ -90,7 +90,6 @@ After installation, run to commad to run Speech-To-Text-With-Translation.
 python3 DeepSpeech-examples/mic_vad_streaming/mic_vad_streaming.py -m deepspeech-0.9.3-models.tflite -s deepspeech-0.9.3-models.scorer
 ```
 
-
 This command is only available in the directory ``` dspeech```. 
 To make more easy and run the code in the hoome directory, follow the steps.
 
@@ -99,10 +98,6 @@ alias run='python3 dspeech/DeepSpeech-examples/mic_vad_streaming/mic_vad_streami
 ```
 
 Also add the commad in ``` ~/.bashrc``` and use ``` source ./.bashrc```.
-
-
-
-
 
 ## Issues with Installation
 
@@ -115,10 +110,6 @@ Visit the Github and you can see more details about each installation
 
 Or you can contact me through the email below. 
 
-
-
-
-
 ## My Contribution 
 
 - Deep Speech is a program that convert English speech to English text.
@@ -126,10 +117,6 @@ Or you can contact me through the email below.
 - I have revised Deep speech python code to translate the text that has been converted from speech into languages that users want.
 - I have made the program to stop by saying "Shut Down" and made the program to change the language by saying "Change Language".
 - For more details, watch the Youtube video provided above.
-
-
-
-
 
 
 ## Development
