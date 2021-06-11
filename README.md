@@ -1,38 +1,28 @@
 # OSSLab Final Project
 ## Speech-To-Text-with-Translation
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
-AngularJS-powered HTML5 Markdown editor.
-
 - This is Speach-To-Text-Translation constructed with DeepSpeech and Googletrans.
+- This is a free open-source software using the two other open-source softwares consecutively.
 - You can translate your speech into languges you want.
 - DeepSpeech and Googletrans are both opensource and there are links below if you need.
 
-▸ DeepSheech : https://github.com/touchgadget/DeepSpeech.git
-▸ googletrans : https://github.com/ssut/py-googletrans.git
+    ▸ DeepSheech : https://github.com/touchgadget/DeepSpeech.git
+    ▸ googletrans : https://github.com/ssut/py-googletrans.git
 
 ## Features
 
-- There are 5 preset languages that you can choose (Korean, Japanese, Chinese, Latin, Espa).
-- If you need other languages, check if the language you are finding exist in followed link. (https://readthedocs.org/projects/py-googletrans/downloads/pdf/latest/)
+- You can choose your language to translate your speech.
+- There are five preset languages that you can choose (Korean, Japanese, Chinese, Latin, Esperanto, and others).
+- If you need other languages, check if the language you are finding exist in followed link. ([Language List])
+- The input speech can be only English.
+- If you want to change your translated language, then say "Change language".
 
-Markdown is a lightweight markup language based on the formatting conventions
-that people naturally use in email.
-As [John Gruber] writes on the [Markdown site][df1]
-
-> The overriding design goal for Markdown's
-> formatting syntax is to make it as readable
-> as possible. The idea is that a
-> Markdown-formatted document should be
-> publishable as-is, as plain text, without
-> looking like it's been marked up with tags
-> or formatting instructions.
 
 ## Installation
 
-Speech-To-Text-with-Translation requires python3+.
+**Speech-To-Text-with-Translation requires python3+.**
 
-Install Guide
+**Deep Speech**
 
 ```sh
 sudo apt install git python3-pip python3-scipy python3-numpy python3-pyaudio libatlas3-base
@@ -46,7 +36,7 @@ tar xvf audio-0.9.3.tar.gz
 source ~/.profile
 ```
 
-For the microphone usage, run the comomad and change the default values.
+For the microphone usage, run the comomad and change the default values of```defaults.ctl.card ``` and ```defaults.pcm.card ``` to 3.
 
 ```sh
 sudo nano /usr/share/alsa/alsa.conf
@@ -58,25 +48,19 @@ defaults.pcm.card 3
 ```
 
 
+Clone the git repository.
 ```sh
-git clone https://github.com/mozilla/DeepSpeech-examples
+git clone https://github.com/wok1909/Speech-To-Text-with-Translation.git
 pip3 install halo webrtcvad --upgrade
 ```
-
-```sh
-git clone https://github.com/mozilla/DeepSpeech-examples
-pip3 install halo webrtcvad --upgrade
-```
-
 
 Now you are ready to use Deep Speech
 
-To install googletrans run the commad
+**googletrans**
 
 ```sh
 pip3 install googletrans
 ```
-
 
 To check if you are ready to use googletrans run the codes in Python3
 
@@ -91,11 +75,20 @@ To check if you are ready to use googletrans run the codes in Python3
 # <Translated src=la dest=en text=The truth is my light pronunciation=The truth is my light>
 ```
 
-If you are ready run to commad to run Speech-To-Text-With-Translation
+After installation, run to commad to run Speech-To-Text-With-Translation.
   
 ```sh
 python3 DeepSpeech-examples/mic_vad_streaming/mic_vad_streaming.py -m deepspeech-0.9.3-models.tflite -s deepspeech-0.9.3-models.scorer
 ```
+
+This command is only available in the directory ``` dspeech```. 
+To make more easy and run the code in the hoome directory, follow the steps.
+
+```sh
+alias run='python3 dspeech/DeepSpeech-examples/mic_vad_streaming/mic_vad_streaming.py -m dspeech/deepspeech-0.9.3-models.tflite -s dspeech/deepspeech-0.9.3-models.scorer'
+```
+
+Also add the commad in ``` ~/.bashrc``` and use ``` source ./.bashrc```.
 
 ## Issues with Installation
 
@@ -106,22 +99,30 @@ Visit the Github and you can see more details about each installation
 | DeepSpeech | [DeepSpeech/Readme.md][DSpeech]|
 | googletrans | [py-googletrans/Readme.rst][googletrans]|
 
+Or you can contact me through the email below. 
+
 ## My Contribution 
+
+- Deep Speech is a program that convert English speech to English text.
+- googletrans is a module that translate text into another language text.
+- I have revised Deep speech python code to translate the text that has been converted from speech into languages that users want.
+- I have made the program to stop by saying "Shut Down" and made the program to change the language by saying "Change Language".
+- For more details, watch the Youtube video provided above.
 
 
 ## Development
 
 Want to contribute? Great!
+Create a pull-request and I will checkout your code.
+If you have anything to ask or suggest, contact me through my email!
 
+**Contact Information: 21600437@handong.edu**
 
-
-
-
-**Free Software, Hell Yeah!**
+**Free Software, Yeah!**
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-
+   [Language List]: <https://readthedocs.org/projects/py-googletrans/downloads/pdf/latest/>
    [DSpeech]: <https://github.com/touchgadget/DeepSpeech/blob/master/README.md>
    [googletrans]: <https://github.com/ssut/py-googletrans/blob/master/README.rst>
 
