@@ -1,5 +1,5 @@
 # OSSLab Final Project
-## Youtube Link: https://www.youtube.com/watch?v=9Fy8kmOij7U
+## Youtube Link: https://youtu.be/__nMGdqRLtw
 
 ## Speech-To-Text-with-Translation
 
@@ -86,6 +86,14 @@ To check if you are ready to use googletrans run the codes in Python3
 >>> translator.translate('veritas lux mea', src='la')
 # <Translated src=la dest=en text=The truth is my light pronunciation=The truth is my light>
 ```
+If you get an error, then delete the google trans and download it again with the commad below.
+
+```sh
+pip uninstall googletrans
+
+pip install googletrans==3.1.0a0
+
+```
 
 After installation, run to commad to run Speech-To-Text-With-Translation.
   
@@ -119,7 +127,7 @@ Or you can contact me through the email below.
 - googletrans is a module that translate text into another language text.
 - I have revised Deep speech python code to translate the text that has been converted from speech into languages that users want.
 - I have made the program to stop by saying "Shut Down" and made the program to change the language by saying "Change Language".
-- For more details, watch the Youtube video provided above.
+- For more details about the contribution I made, you can see the code at ```mic_vad_streaming/mic_vad_streaming.py``` in this git repository.
 
 
 ## Development
